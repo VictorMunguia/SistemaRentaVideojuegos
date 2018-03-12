@@ -1,0 +1,83 @@
+﻿@model RentaVideojuegosMVC5.Models.Videojuego
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<div class="container">
+    <header class="row">
+        <div class="col-md-12">
+            <h2 class="TituloDetallesVIdeojuegos text-center">@Model.Nombre</h2>
+        </div>
+    </header>
+</div>
+
+
+<br />
+
+<div class="container">
+    <header class="row">
+        <div class="col-sm-6 col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="../../Content/Genero.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="text-center">Genero</h2>
+                    <p class="card-text text-center">@Model.Genero.Nombre</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="../../Content/Fecha.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="text-center">Fecha de salida</h2>
+                    <p class="card-text text-center">@Model.FechaDePublicacion.Value.Day / @Model.FechaDePublicacion.Value.Month / @Model.FechaDePublicacion.Value.Year</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="../../Content/Descripcion.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="text-center">Descripcion</h2>
+                    <p class="card-text text-justify">@Model.Descripcion</p>
+                </div>
+            </div>
+        </div>
+
+    </header>
+</div>
+
+<br />
+
+<div class="container">
+    <header class="row">
+        <div class="col-sm-1 col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="../../Content/Edad.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="text-center">Edad Recomendada</h2>
+                    <p class="card-text text-center">@Model.Edad.Nombre</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-10 col-md-4"></div>
+
+        <div class="col-sm-1 col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="../../Content/Numero.png" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="text-center">Numero en Stock</h2>
+                    <p class="card-text text-center">@Model.NumeroDisponiblre</p>
+                </div>
+            </div>
+        </div>
+
+    </header>
+</div>
+

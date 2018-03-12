@@ -1,0 +1,36 @@
+﻿@model IEnumerable<RentaVideojuegosMVC5.Models.Videojuego>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Styles.Render("~/Content/css")
+
+<br />
+
+<h2 class="tITULO">Videojuegos Disponibles</h2>
+
+<br />
+<a href="@Url.Action("Nuevo", "Videojuegos", new { })" class="BotonCrearJuego btn btn-primary" role="button">Crear Videojuego</a>
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th class="text-center">Nombre Videojuego</th>
+            <th class="text-center">Genero</th>
+            <th class="text-center">Edad</th>
+            <th class="text-center">Detalles</th>
+            <th class="text-center">Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Videojuego in Model)
+            {
+            <tr>
+                <td class="text-center">@Videojuego.Nombre</td>
+                <td class=text-center>@Videojuego.Genero.Nombre</td>
+                <td class=text-center>@Videojuego.Edad.Nombre</td>
+                <td class="text-dark text-center">@Html.ActionLink("Detalles", "Detalles", "Videojuegos", new { id = Videojuego.Id }, new { })</td>
+                <td class="btn-link text-center">Eliminar</td>
+            </tr>
+        }
+    </tbody>
+</table>
