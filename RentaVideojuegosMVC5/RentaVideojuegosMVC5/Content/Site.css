@@ -77,3 +77,8 @@ table {
 .TextoFormulario {
     color:white;
 }
+
+.BotonModificarVideojuego {
+    margin-left: 18px;
+    margin-bottom:20px;
+}

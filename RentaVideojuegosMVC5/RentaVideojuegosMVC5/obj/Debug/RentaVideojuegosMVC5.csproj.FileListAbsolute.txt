@@ -280,3 +280,4 @@ C:\Users\victo\Source\Repos\SistemaRentaVideojuegos\RentaVideojuegosMVC5\RentaVi
 C:\Users\victo\Source\Repos\SistemaRentaVideojuegos\RentaVideojuegosMVC5\RentaVideojuegosMVC5\obj\Debug\RentaVideojuegosMVC5.csproj.CoreCompileInputs.cache
 C:\Users\victo\Source\Repos\SistemaRentaVideojuegos\RentaVideojuegosMVC5\RentaVideojuegosMVC5\obj\Debug\RentaVideojuegosMVC5.dll
 C:\Users\victo\Source\Repos\SistemaRentaVideojuegos\RentaVideojuegosMVC5\RentaVideojuegosMVC5\obj\Debug\RentaVideojuegosMVC5.pdb
+C:\Users\victo\Source\Repos\SistemaRentaVideojuegos\RentaVideojuegosMVC5\RentaVideojuegosMVC5\obj\Debug\RentaVideojuegosMVC5.csproj.CopyComplete

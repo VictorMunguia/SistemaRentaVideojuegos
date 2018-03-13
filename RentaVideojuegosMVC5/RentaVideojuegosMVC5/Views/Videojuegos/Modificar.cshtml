@@ -17,7 +17,7 @@
 
 <br />
 
-@using (Html.BeginForm("", ""))
+@using (Html.BeginForm("ModificarInformacion", "Videojuegos"))
 {
 
     <div class="ContenedorJuegos container">
@@ -74,7 +74,6 @@
             </div>
 
             <div class="col-md-2"></div>
-            @Html.HiddenFor(m => m.Videojuego.Id)
             <div class="col-md-4">
                 @Html.AntiForgeryToken()
                 <button type="submit" class="btn btn-primary FormularioFinal">Guardar</button>
