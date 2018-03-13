@@ -16,7 +16,7 @@
 
 <br />
 
-@using (Html.BeginForm("CreateOrUpdate", "Videojuegos"))
+@using (Html.BeginForm("Crear", "Videojuegos"))
 {
 
     <div class="ContenedorJuegos container">
@@ -83,5 +83,10 @@
         </header>
     </div>
 
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
 }
 

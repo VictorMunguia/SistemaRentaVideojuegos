@@ -326,6 +326,7 @@
     <Content Include="Views\Videojuegos\Index.cshtml" />
     <Content Include="Views\Videojuegos\Detalles.cshtml" />
     <Content Include="Views\Videojuegos\Nuevo.cshtml" />
+    <Content Include="Views\Videojuegos\Modificar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,92 @@
+﻿@model RentaVideojuegosMVC5.ViewModel.VideojuegosViewModel
+
+@{
+    ViewBag.Title = "Modificar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<div class="container">
+    <header class="row">
+        <div class="col-md-12">
+            <h2 class="TituloDetallesVIdeojuegos text-center">Modificar Juego</h2>
+        </div>
+    </header>
+</div>
+
+<br />
+
+@using (Html.BeginForm("", ""))
+{
+
+    <div class="ContenedorJuegos container">
+        <header class="row">
+
+            <div class="col-md-2"></div>
+
+            <div class="col-md-5">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Videojuego.Nombre, new { @class = "TextoFormulario" })
+                    @Html.TextBoxFor(m => m.Videojuego.Nombre, new { @class = "form-control", @placeholder = "Escribe Nombre" })
+                    @Html.ValidationMessageFor(m => m.Videojuego.Nombre, "", new { @class = "badge badge-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Videojuego.FechaDePublicacion, new { @class = "TextoFormulario" })
+                    @Html.TextBoxFor(m => m.Videojuego.FechaDePublicacion, "{0:d MMM yyyy}", new { @class = "form-control", @placeholder = "Escribe fecha 1/1/1990" })
+                    @Html.ValidationMessageFor(m => m.Videojuego.FechaDePublicacion, "", new { @class = "badge badge-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-2"></div>
+
+            <div class="col-md-5">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Videojuego.Descripcion, new { @class = "TextoFormulario" })
+                    @Html.TextAreaFor(m => m.Videojuego.Descripcion, new { @class = "form-control", @placeholder = "Escribe descripcion" })
+                    @Html.ValidationMessageFor(m => m.Videojuego.Descripcion, "", new { @class = "badge badge-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Videojuego.NumeroDisponiblre, new { @class = "TextoFormulario" })
+                    @Html.TextBoxFor(m => m.Videojuego.NumeroDisponiblre, new { @class = "form-control", @placeholder = "Escribe numero en stock" })
+                    @Html.ValidationMessageFor(m => m.Videojuego.NumeroDisponiblre, "", new { @class = "badge badge-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-2"></div>
+
+            <div class="col-md-5">
+                @Html.LabelFor(model => model.Videojuego.GeneroId, new { @class = "TextoFormulario" })
+                @Html.DropDownListFor(m => m.Videojuego.GeneroId, new SelectList(Model.ListaGenero, "Id", "Nombre"), "Selecciona un genero", new { @class = "FormularioFinal form-control" })
+                @Html.ValidationMessageFor(m => m.Videojuego.GeneroId, "", new { @class = "badge badge-danger" })
+            </div>
+
+            <div class="col-md-5">
+                @Html.LabelFor(model => model.Videojuego.EdadId, new { @class = "TextoFormulario" })
+                @Html.DropDownListFor(m => m.Videojuego.EdadId, new SelectList(Model.ListaEdad, "Id", "Nombre"), "Selecciona edad recomendada", new { @class = "FormularioFinal form-control" })
+                @Html.ValidationMessageFor(m => m.Videojuego.EdadId, "", new { @class = "badge badge-danger" })
+            </div>
+
+            <div class="col-md-2"></div>
+            @Html.HiddenFor(m => m.Videojuego.Id)
+            <div class="col-md-4">
+                @Html.AntiForgeryToken()
+                <button type="submit" class="btn btn-primary FormularioFinal">Guardar</button>
+            </div>
+
+
+        </header>
+    </div>
+
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}

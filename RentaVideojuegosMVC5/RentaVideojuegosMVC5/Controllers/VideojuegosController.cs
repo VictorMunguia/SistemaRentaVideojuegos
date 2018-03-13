@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using RentaVideojuegosMVC5.Models;
 using RentaVideojuegosMVC5.ViewModel;
 using System.Data.Entity;
+using System.Net;
 
 namespace RentaVideojuegosMVC5.Controllers
 {
@@ -25,14 +26,14 @@ namespace RentaVideojuegosMVC5.Controllers
         }
 
         // GET: Videojuegos
-        public ActionResult Index()
+        public ActionResult Index()//Controlador para llenar la vista Index
         {
             var ListaJuegosBase = _context.VideojuegosBaseDatos.Include(c => c.Genero).Include(c => c.Edad).ToList();
 
             return View(ListaJuegosBase);
         }
 
-        public ActionResult Detalles(int Id)
+        public ActionResult Detalles(int Id)//Controlador para llenar la vista de detalles
         {
             var Juego = _context.VideojuegosBaseDatos.Include(c => c.Genero).Include(c => c.Edad).SingleOrDefault(c => c.Id == Id);
             if (Juego == null)
@@ -46,7 +47,7 @@ namespace RentaVideojuegosMVC5.Controllers
             
         }
 
-        public ActionResult Nuevo()
+        public ActionResult Nuevo()//Controlador para llenar la vista del formulario para crear un juego
         {
             var GenerosLista = _context.GenerosBaseDatos.ToList();
             var EdadesLista = _context.EdadesBaseDatos.ToList();
@@ -63,7 +64,7 @@ namespace RentaVideojuegosMVC5.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateOrUpdate(Videojuego Videojuego)
+        public ActionResult Crear(Videojuego Videojuego)//Controlador para guardar un nuevo juego desde la vista nuevo
         {
             if(!ModelState.IsValid)
             {
@@ -83,6 +84,29 @@ namespace RentaVideojuegosMVC5.Controllers
 
                 return RedirectToAction("Index", "Videojuegos");
             }
+        }
+
+        public ActionResult Modificar(int Id)//Controlador para llenar la vista modificar.
+        {
+            var Juego = _context.VideojuegosBaseDatos.SingleOrDefault(c => c.Id == Id);
+
+            if(Juego == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                var ViewModelVideojuego = new VideojuegosViewModel
+                {
+                    Videojuego = Juego,
+                    ListaGenero = _context.GenerosBaseDatos.ToList(),
+                    ListaEdad = _context.EdadesBaseDatos.ToList()
+                };
+
+                return View(ViewModelVideojuego);
+            }
+           
+            
         }
     }
 }

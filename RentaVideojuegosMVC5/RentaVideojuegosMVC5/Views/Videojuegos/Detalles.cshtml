@@ -14,6 +14,9 @@
     </header>
 </div>
 
+<br />
+
+<a href="@Url.Action("Modificar", "Videojuegos", new { id = Model.Id })" class="BotonCrearJuego btn btn-primary" role="button">Crear Videojuego</a>
 
 <br />
 
@@ -34,7 +37,16 @@
                 <img class="card-img-top" src="../../Content/Fecha.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h2 class="text-center">Fecha de salida</h2>
-                    <p class="card-text text-center">@Model.FechaDePublicacion.Value.Day / @Model.FechaDePublicacion.Value.Month / @Model.FechaDePublicacion.Value.Year</p>
+                    @{
+                        if (Model.FechaDePublicacion == null)
+                        {
+                            <p class="card-text text-center">No se espesifico fecha</p>
+                        }
+                        else
+                        {
+                            <p class="card-text text-center">@Model.FechaDePublicacion.Value.Day / @Model.FechaDePublicacion.Value.Month / @Model.FechaDePublicacion.Value.Year</p>
+                        }
+                    }
                 </div>
             </div>
         </div>
@@ -44,7 +56,16 @@
                 <img class="card-img-top" src="../../Content/Descripcion.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h2 class="text-center">Descripcion</h2>
-                    <p class="card-text text-justify">@Model.Descripcion</p>
+                    @{
+                        if (Model.Descripcion == null)
+                        {
+                            <p class="card-text text-center">No se espesifico descripcion</p>
+                        }
+                        else
+                        {
+                            <p class="card-text text-justify">@Model.Descripcion</p>
+                        }
+                    }
                 </div>
             </div>
         </div>
