@@ -108,6 +108,8 @@ namespace RentaVideojuegosMVC5.Controllers
             
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult ModificarInformacion(Videojuego Videojuego)
         {
             if (!ModelState.IsValid)
@@ -125,7 +127,7 @@ namespace RentaVideojuegosMVC5.Controllers
             }
            
             
-                var VideojuegoBaseDeDatos = _context.VideojuegosBaseDatos.Single(c => c.Id == Videojuego.Id);
+                var VideojuegoBaseDeDatos = _context.VideojuegosBaseDatos.Single(c => c.Id == Videojuego.Id);//Estamos comparando la ID que retorna el juego desde el formulario, por lo que en el formulario tiene que haber un campo escondido con el id del objeto
 
                 VideojuegoBaseDeDatos.Nombre = Videojuego.Nombre;
                 VideojuegoBaseDeDatos.Descripcion = Videojuego.Descripcion;
@@ -136,8 +138,9 @@ namespace RentaVideojuegosMVC5.Controllers
 
                 _context.SaveChanges();
 
-                return RedirectToAction(Convert.ToString(Detalles(VideojuegoBaseDeDatos.Id)), "Videojuegos");
+                return RedirectToAction("Index", "Videojuegos");
             
         }
+
     }
 }

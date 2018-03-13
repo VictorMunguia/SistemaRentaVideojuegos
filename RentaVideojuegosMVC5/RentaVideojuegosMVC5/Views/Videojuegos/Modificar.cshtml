@@ -76,6 +76,7 @@
             <div class="col-md-2"></div>
             <div class="col-md-4">
                 @Html.AntiForgeryToken()
+                @Html.HiddenFor(m => m.Videojuego.Id)@*Este es el campo escondido con el ID, esto permite comparar el ID de este objeto con el de la base de datos para modificarlo*@
                 <button type="submit" class="btn btn-primary FormularioFinal">Guardar</button>
             </div>
 
