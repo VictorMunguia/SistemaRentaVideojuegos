@@ -27,4 +27,7 @@ namespace RentaVideojuegosMVC5.Controllers
             return View();
         }
     }
+
+
+    //s
 }

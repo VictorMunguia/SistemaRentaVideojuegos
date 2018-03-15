@@ -212,10 +212,13 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Edad.cs" />
     <Compile Include="Models\Genero.cs" />
+    <Compile Include="Models\GeneroCliente.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Membresia.cs" />
     <Compile Include="Models\Videojuego.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
