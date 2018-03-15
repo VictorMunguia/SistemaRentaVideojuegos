@@ -23,6 +23,10 @@ namespace RentaVideojuegosMVC5.Models
         public DbSet<Videojuego> VideojuegosBaseDatos { get; set; }
         public DbSet<Genero> GenerosBaseDatos { get; set; }
         public DbSet<Edad> EdadesBaseDatos { get; set; }
+        public DbSet<Cliente> ClienteBaseDatos { get; set; }
+        public DbSet<GeneroCliente> GeneroClienteBaseDatos { get; set; }
+        public DbSet<Membresia> MembresiaBaseDatos { get; set; }
+
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

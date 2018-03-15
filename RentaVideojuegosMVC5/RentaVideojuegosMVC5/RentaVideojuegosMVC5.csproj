@@ -192,6 +192,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\VideojuegosController.cs" />
@@ -209,6 +210,22 @@
     <Compile Include="Migrations\201803112338283_AgregarRequerimientosAtributoStock.cs" />
     <Compile Include="Migrations\201803112338283_AgregarRequerimientosAtributoStock.Designer.cs">
       <DependentUpon>201803112338283_AgregarRequerimientosAtributoStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803150604053_CreacionBaseDatosCliente.cs" />
+    <Compile Include="Migrations\201803150604053_CreacionBaseDatosCliente.Designer.cs">
+      <DependentUpon>201803150604053_CreacionBaseDatosCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803150610282_AgregandoRegistrosBaseDatosGeneroMembresia.cs" />
+    <Compile Include="Migrations\201803150610282_AgregandoRegistrosBaseDatosGeneroMembresia.Designer.cs">
+      <DependentUpon>201803150610282_AgregandoRegistrosBaseDatosGeneroMembresia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803150615338_AgregandoCampoDescuentoMembresia.cs" />
+    <Compile Include="Migrations\201803150615338_AgregandoCampoDescuentoMembresia.Designer.cs">
+      <DependentUpon>201803150615338_AgregandoCampoDescuentoMembresia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803150616365_AgregandoCampoDescuentoMembresia2.cs" />
+    <Compile Include="Migrations\201803150616365_AgregandoCampoDescuentoMembresia2.Designer.cs">
+      <DependentUpon>201803150616365_AgregandoCampoDescuentoMembresia2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -231,6 +248,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Cards.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -330,6 +348,7 @@
     <Content Include="Views\Videojuegos\Detalles.cshtml" />
     <Content Include="Views\Videojuegos\Nuevo.cshtml" />
     <Content Include="Views\Videojuegos\Modificar.cshtml" />
+    <Content Include="Views\Clientes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -352,6 +371,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803112338283_AgregarRequerimientosAtributoStock.resx">
       <DependentUpon>201803112338283_AgregarRequerimientosAtributoStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803150604053_CreacionBaseDatosCliente.resx">
+      <DependentUpon>201803150604053_CreacionBaseDatosCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803150610282_AgregandoRegistrosBaseDatosGeneroMembresia.resx">
+      <DependentUpon>201803150610282_AgregandoRegistrosBaseDatosGeneroMembresia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803150615338_AgregandoCampoDescuentoMembresia.resx">
+      <DependentUpon>201803150615338_AgregandoCampoDescuentoMembresia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803150616365_AgregandoCampoDescuentoMembresia2.resx">
+      <DependentUpon>201803150616365_AgregandoCampoDescuentoMembresia2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

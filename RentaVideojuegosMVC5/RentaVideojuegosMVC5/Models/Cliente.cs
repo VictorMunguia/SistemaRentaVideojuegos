@@ -28,5 +28,17 @@ namespace RentaVideojuegosMVC5.Models
         [Required]
         [Display(Name ="El cliente tiene suscripcion ? ")]
         public bool EstaSuscrito  { get; set; }
+
+        public GeneroCliente GeneroCliente { get; set; }
+
+        [Required]
+        [Display(Name = "Elige genero del cliente")]
+        public int GeneroClienteId { get; set; }
+
+        public Membresia Membresia { get; set; }
+
+        [Required]
+        [Display(Name ="Elige El tipo de Membresia")]
+        public int MembresiaId { get; set; }
     }
 }

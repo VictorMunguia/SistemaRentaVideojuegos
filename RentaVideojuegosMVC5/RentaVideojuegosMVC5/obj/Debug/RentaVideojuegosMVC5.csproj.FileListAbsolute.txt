@@ -375,3 +375,7 @@ C:\Users\vMunguia\Source\Repos\SistemaRentaVideojuegos\RentaVideojuegosMVC5\Rent
 C:\Users\vMunguia\Source\Repos\SistemaRentaVideojuegos\RentaVideojuegosMVC5\RentaVideojuegosMVC5\obj\Debug\RentaVideojuegosMVC5.csproj.CoreCompileInputs.cache
 C:\Users\vMunguia\Source\Repos\SistemaRentaVideojuegos\RentaVideojuegosMVC5\RentaVideojuegosMVC5\obj\Debug\RentaVideojuegosMVC5.dll
 C:\Users\vMunguia\Source\Repos\SistemaRentaVideojuegos\RentaVideojuegosMVC5\RentaVideojuegosMVC5\obj\Debug\RentaVideojuegosMVC5.pdb
+C:\Users\victo\Source\Repos\SistemaRentaVideojuegos\RentaVideojuegosMVC5\RentaVideojuegosMVC5\obj\Debug\RentaVideojuegosMVC5.Migrations.CreacionBaseDatosCliente.resources
+C:\Users\victo\Source\Repos\SistemaRentaVideojuegos\RentaVideojuegosMVC5\RentaVideojuegosMVC5\obj\Debug\RentaVideojuegosMVC5.Migrations.AgregandoRegistrosBaseDatosGeneroMembresia.resources
+C:\Users\victo\Source\Repos\SistemaRentaVideojuegos\RentaVideojuegosMVC5\RentaVideojuegosMVC5\obj\Debug\RentaVideojuegosMVC5.Migrations.AgregandoCampoDescuentoMembresia.resources
+C:\Users\victo\Source\Repos\SistemaRentaVideojuegos\RentaVideojuegosMVC5\RentaVideojuegosMVC5\obj\Debug\RentaVideojuegosMVC5.Migrations.AgregandoCampoDescuentoMembresia2.resources

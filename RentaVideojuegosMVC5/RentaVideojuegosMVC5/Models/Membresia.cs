@@ -10,5 +10,7 @@ namespace RentaVideojuegosMVC5.Models
         public int Id { get; set; }
 
         public string Nombre { get; set; }
+
+        public int Descuento { get; set; }
     }
 }
